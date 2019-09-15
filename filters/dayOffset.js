@@ -7,7 +7,7 @@ module.exports = function(localeTime, matchTime) {
     // matchDate = ISODate(matchTime)
     // localeDate = ISODate(localeTime)
 
-    if ( localeDateISO < matchDateISO ) {
+    if ( localeDateISO !== matchDateISO ) {
         return localeDateISO
     } else {
         return
