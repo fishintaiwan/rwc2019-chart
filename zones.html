@@ -44,7 +44,7 @@ permalink: /{{ zone.location }}/index.html
                                         </small>
                                         Converted JPN: {{ match.datetime | addZone: "ja", "Asia/Tokyo" | addZone: zone.locale, zone.location| dayOffset: match.datetime }}
                                         Original Data: {{ match.datetime }}
-                                        Localized: {{ match.datetime | addZone: zone.locale, zone.location
+                                        Localized: {{ match.datetime | addZone: zone.locale, zone.location }}
                                     </div>
                                 </div>
                             </div>
