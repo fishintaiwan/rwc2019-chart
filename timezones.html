@@ -4,9 +4,6 @@ layout: base.liquid
 <div class="prose container">
   <h1 class="h1">In your zone.</h1>
   <p class="quiet text-block">This site gets your location from your browser, and serves the most appropriate timezone data that's available. To change the timezone you see, select one from the list below. Don't stress though, <span class="highlight">none of your location data is stored</span> by this website in any form.</p>
-  <!-- <p>
-    What? Your locale is not here? The outrage! You can always <a href="{{ pkg.repository.url }}">add it with a pull request</a>.
-  </p> -->
   <ul class="link-group">
   {% for zone in timezones %}
     <li><a href="/{{ zone.location }}" class="link">{{ zone.location }}</a></li>
