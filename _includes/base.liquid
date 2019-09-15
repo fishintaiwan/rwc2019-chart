@@ -10,16 +10,6 @@
     <meta name="theme-color" content="#2C2540">
     <link rel="shortcut icon" href="/_includes/icons/favicon.ico" />
     <link rel="apple-touch-icon" href="/_includes/icons/apple-touch-icon.png" />
-    <script>
-            if ("serviceWorker" in navigator) {
-              navigator.serviceWorker
-                .register("/service-worker.js")
-                .then(function() {
-                  console.log("ServiceWorker has been registered!");
-                })
-                .catch(console.error);
-            }
-          </script>
     <script type="text/javascript">
         function scrollToGame() {
                 var today = new Date();
@@ -59,5 +49,15 @@
     {{ content }}
     {% include 'footer' %}
     <link href="https://fonts.googleapis.com/css?family=Karla|Rubik:700&display=swap" rel="stylesheet">
+    <script>
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then(function() {
+              console.log("ServiceWorker has been registered!");
+            })
+            .catch(console.error);
+        }
+      </script>
 </body>
 </html>

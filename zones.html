@@ -25,11 +25,10 @@ permalink: /{{ zone.location }}/index.html
                     {% for match in matches.pools %}
                         {% if match.day == day.day %}
                         {% assign matchTime = match.datetime | addZone: "ja", "Asia/Tokyo" %}
-                        {% assign localeTime = matchTime | addZone: zone.locale, zone.location %}
                             <div class="match" data-pool="{{match.pool}}">
                                 <div class="label pool {{match.pool}}">
                                     <div class="match-time">
-                                        <span>{{ matchTime | dayOffset: localeTime | date: "%a, %b %e" }}</span>
+                                        <span>{{ matchTime | | addZone: zone.locale, zone.location| dayOffset: matchTime | date: "%a, %b %e" }}</span>
                                         <p>{{ match.datetime | addZone: zone.locale, zone.location | date: "%H:%M" }}</p>
                                 </div>
                                     <span class="separator"></span>

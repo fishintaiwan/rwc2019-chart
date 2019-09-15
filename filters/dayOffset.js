@@ -1,4 +1,4 @@
-module.exports = function(matchTime, localeTime) {
+module.exports = function(localeTime, matchTime) {
     let matchDate = new Date(matchTime)
     let localeDate  = new Date(localeTime)
 
