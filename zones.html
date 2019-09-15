@@ -27,7 +27,7 @@ permalink: /{{ zone.location }}/index.html
                             <div class="match" data-pool="{{match.pool}}">
                                 <div class="label pool {{match.pool}}">
                                     <div class="match-time">
-                                        <span>{{ match.datetime | addZone: "ja", "Asia/Tokyo" | addZone: zone.locale, zone.location| dayOffset: match.datetime | date: "%a, %b %e" }}</span>
+                                        <span>{{ match.datetime | addZone: zone.locale, zone.location| dayOffset: match.datetime | date: "%a, %b %e" }}</span>
                                         <p>{{ match.datetime | addZone: zone.locale, zone.location | date: "%H:%M" }}</p>
                                 </div>
                                     <span class="separator"></span>
@@ -42,9 +42,6 @@ permalink: /{{ zone.location }}/index.html
                                             <span>@ {{ match.location }}</span>
                                             <span>Japan time: {{ match.datetime | addZone: "ja", "Asia/Tokyo" | date: "%H:%M" }}</span>
                                         </small>
-                                        Converted JPN: {{ match.datetime | addZone: "ja", "Asia/Tokyo" | addZone: zone.locale, zone.location| dayOffset: match.datetime }}
-                                        Original Data: {{ match.datetime }}
-                                        Localized: {{ match.datetime | addZone: zone.locale, zone.location }}
                                     </div>
                                 </div>
                             </div>
