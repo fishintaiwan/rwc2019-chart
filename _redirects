@@ -1,0 +1,24 @@
+/  /Pacific/Auckland                    200 Country=nz
+/  /Australia/Sydney                    200 Country=au
+/  /Asia/Hong_Kong                      200 Country=hk
+/  /Asia/Tokyo                          200 Country=jp
+/  /Asia/Taipei                         200 Country=tw
+/  /Asia/Shanghai                       200 Country=cn
+/  /America/Argentina/Buenos_Aires      200 Country=ar
+/  /America/Toronto                     200 Country=ca
+/  /Pacific/Fiji                        200 Country=fj
+/  /Pacific/Apia                        200 Country=ws
+/  /Asia/Tbilisi                        200 Country=ge
+/  /Europe/Bucharest                    200 Country=ro
+/  /Europe/Moscow                       200 Country=ru
+/  /Europe/Paris                        200 Country=fr,es,de,it,se,dk,nl,pl
+/  /Europe/London                       200 Country=gb,pt
+/  /Europe/Dublin                       200 Country=ie
+/  /Africa/Windhoek                     200 Country=na
+/  /America/Chicago                     200 Country=us
+/  /Pacific/Tongatapu                   200 Country=to
+/  /America/Montevideo                  200 Country=uy
+/  /Europe/Rome                         200 Country=it
+/  /Africa/Johannesburg                 200 Country=za
+
+/*  /                                   404

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RWC 2019 World Cup - Kanban</title>
+    <link rel="stylesheet" href="/_includes/styles/kanban.css">
+    <link rel="manifest" href="/manifest.json" />
+    <script>
+            if ("serviceWorker" in navigator) {
+              navigator.serviceWorker
+                .register("/service-worker.js")
+                .then(function() {
+                  console.log("ServiceWorker has been registered!");
+                })
+                .catch(console.error);
+            }
+          </script>
+    <script type="text/javascript">
+        function scrollToGame() {
+                var today = new Date();
+                console.log(today)
+                var year = today.getFullYear();
+                var month = leadingZeroDate(today.getMonth() + 1);
+                var day = leadingZeroDate(today.getDate());
+                var date = year + '' + month + '' + day;
+                
+                var boards = document.querySelectorAll('.board')
+
+                var boardsArr = Array.from(boards)
+
+                const nextGame = boardsArr.find((el) => Number(el.id) >= Number(date))
+                
+                nextGame.scrollIntoView({ 
+                    behavior: 'smooth' 
+                }) 
+        }
+
+        function leadingZeroDate(data) {
+            return (data < 10 ? '0' : '') + data;
+        }
+    </script>
+</head>
+<body>
+    {{ content }}
+    {% include 'footer' %}
+    <link href="https://fonts.googleapis.com/css?family=Karla|Rubik:700&display=swap" rel="stylesheet">
+</body>
+</html>

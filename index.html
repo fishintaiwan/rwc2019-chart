@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RWC 2019 World Cup - Kanban</title>
+    <link rel="stylesheet" href="/_includes/styles/kanban.css">
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#2C2540">
+    <link rel="shortcut icon" href="/_includes/icons/favicon.ico" />
+    <link rel="apple-touch-icon" href="/_includes/icons/apple-touch-icon.png" />
+    <script>
+            if ("serviceWorker" in navigator) {
+              navigator.serviceWorker
+                .register("/service-worker.js")
+                .then(function() {
+                  console.log("ServiceWorker has been registered!");
+                })
+                .catch(console.error);
+            }
+          </script>
+
+    <script type="text/javascript">
+        function scrollToGame() {
+                var today = new Date();
+                console.log(today)
+                var year = today.getFullYear();
+                var month = leadingZeroDate(today.getMonth() + 1);
+                var day = leadingZeroDate(today.getDate());
+                var date = year + '' + month + '' + day;
+                
+                var boards = document.querySelectorAll('.board')
+
+                var boardsArr = Array.from(boards)
+
+                const nextGame = boardsArr.find((el) => Number(el.id) >= Number(date))
+                
+                nextGame.scrollIntoView({ 
+                    behavior: 'smooth' 
+                }) 
+        }
+
+        function leadingZeroDate(data) {
+            return (data < 10 ? '0' : '') + data;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+            <div class="top">
+                    <h1 class="h1">2019 RWC Fixtures</h1>
+                    <p class="quiet text-block"><span class="highlight">UTC</span> timezone being used. <a href="/timezones" class="link">Change timezone.</a></p>
+                    <div class="text-center">
+                        <button class="go-to h4" onclick="scrollToGame()"><span>🏉</span><span>Take me to today's games.</span></button>
+                    </div>
+                </div>
+        <div class="block-holder">
+            {% for day in matchdays.pool %}
+            <div class="board expanded pools" data-matchday="{{ day.day }}" data-date="{{ day.date }}" id={{ day.date | date: '%Y%m%d'}}>
+                <div class="header" data-matchday="{{ day.day }}">
+                    <p class="h6">Day {{ day.day }} | {{ day.date | addZone: "en-US", "Etc/UTC" | date: "%a, %b %e" }}</p>
+                </div>
+    
+                    {% for match in matches.pools %}
+                        {% if match.day == day.day %}
+                            <div class="match" data-pool="{{match.pool}}">
+                                <div class="label pool {{match.pool}}">
+                                    <div class="match-time">{{ match.datetime | addZone: "en-US", "Etc/UTC" | date: "%H:%M" }}</div>
+                                    <span class="separator"></span>
+                                    <span>Pool {{ match.pool }}</span>
+                                </div>
+                                <div class="details">
+                                    <div class="match-info">
+                                        <div class="teams">
+                                            <p class="home h5">{{ match.home }} v. {{ match.away }}</p> 
+                                        </div>
+                                        <small class="extra-info">
+                                            <span>@ {{ match.location }}</span>
+                                            <span>Japan time: {{ match.datetime | addZone: "ja", "Asia/Tokyo" | date: "%H:%M" }}</span>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+            </div>
+            {% endfor %}
+            {% for day in matchdays.semis %}
+                <div class="board expanded" data-matchday="{{ day.day }}" data-date="{{ day.date }}" data-phase="{{ day.phase }}" id={{ day.date | date: '%Y%m%d'}}>
+                        <div class="header" data-matchday="{{ day.day }}">
+                                <p class="h6">Day {{ day.day }} | {{ day.date | addZone: "en-US", "Etc/UTC" | date: "%a, %b %e" }}</p>
+                            </div>
+                
+                                {% for match in matches.semis %}
+                                    {% if match.day == day.day %}
+                                        <div class="match" data-pool="{{match.pool}}">
+                                            <div class="label semis">
+                                                <div class="match-time">{{ match.datetime | addZone: "en-US", "Etc/UTC" | date: "%H:%M" }}</div>
+                                                <span class="separator"></span>
+                                                <span>{{ match.semi-phase }}</span>
+                                            </div>
+                                            <div class="details">
+                                                <div class="match-info">
+                                                    <div class="teams">
+                                                        <p class="home h5">{{ match.home }} v. {{ match.away }}</p> 
+                                                    </div>
+                                                    <small class="extra-info">
+                                                        <span>@ {{ match.location }}</span>
+                                                        <span>Japan time: {{ match.datetime | addZone: "ja", "Asia/Tokyo" | date: "%H:%M" }}</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% include './_includes/footer' %}
+    <link href="https://fonts.googleapis.com/css?family=Karla|Rubik:700&display=swap" rel="stylesheet">
+    <!-- <script src="/_includes/js/interact.js"></script> -->
+</body>
+</html>

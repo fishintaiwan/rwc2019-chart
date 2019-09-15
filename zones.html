@@ -1,0 +1,87 @@
+---
+layout: base.liquid
+pagination:
+  data: timezones
+  size: 1
+  alias: zone
+permalink: /{{ zone.location }}/index.html
+---
+
+<div class="container">
+    <div class="top">
+        <h1 class="h1">2019 RWC Fixtures</h1>
+        <p class="quiet text-block"><span class="highlight">{{ zone.location }}</span> timezone being used. <a href="/timezones" class="link">Change timezone.</a></p>
+        <div class="text-center">
+            <button class="go-to h4" onclick="scrollToGame()"><span>🏉</span><span>Take me to today's games.</span></button>
+        </div>
+    </div>
+        <div class="block-holder">
+            {% for day in matchdays.pool %}
+            <div class="board expanded pools" data-matchday="{{ day.day }}" data-date="{{ day.date }}"  id={{ day.date | date: '%Y%m%d'}}>
+                <div class="header" data-matchday="{{ day.day }}">
+                    <p class="h6">Day {{ day.day }} | {{ day.date | date: "%a, %b %e" }}</p>
+                </div>
+    
+                    {% for match in matches.pools %}
+                        {% if match.day == day.day %}
+                        {% assign matchTime = match.datetime | addZone: "ja", "Asia/Tokyo" %}
+                        {% assign localeTime = matchTime | addZone: zone.locale, zone.location %}
+                            <div class="match" data-pool="{{match.pool}}">
+                                <div class="label pool {{match.pool}}">
+                                    <div class="match-time">
+                                        <span>{{ matchTime | dayOffset: localeTime | date: "%a, %b %e" }}</span>
+                                        <p>{{ localeTime | date: "%H:%M" }}</p>
+                                </div>
+                                    <span class="separator"></span>
+                                    <span>Pool {{ match.pool }}</span>
+                                </div>
+                                <div class="details">
+                                    <div class="match-info">
+                                        <div class="teams">
+                                            <p class="home h5">{{ match.home }} v. {{ match.away }}</p> 
+                                        </div>
+                                        <small class="extra-info">
+                                            <span>@ {{ match.location }}</span>
+                                            <span>Japan time: {{ matchTime | addZone: "ja", "Asia/Tokyo" | date: "%H:%M" }}</span>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+            </div>
+            {% endfor %}
+            {% for day in matchdays.semis %}
+                <div class="board expanded" data-matchday="{{ day.day }}" data-date="{{ day.date }}" data-phase="{{ day.phase }}" id={{ day.date | date: '%Y%m%d'}}>
+                        <div class="header" data-matchday="{{ day.day }}">
+                                <p class="h6">Day {{ day.day }} | {{ day.date | addZone: zone.locale, zone.location | date: "%a, %b %e" }}</p>
+                            </div>
+                
+                                {% for match in matches.semis %}
+                                    {% if match.day == day.day %}
+                                        <div class="match" data-pool="{{match.pool}}">
+                                            <div class="label semis">
+                                                <div class="match-time">{{ match.datetime | addZone: zone.locale, zone.location | date: "%H:%M" }}</div>
+                                                <span class="separator"></span>
+                                                <span>{{ match.semi-phase }}</span>
+                                            </div>
+                                            <div class="details">
+                                                <div class="match-info">
+                                                    <div class="teams">
+                                                        <p class="home h5">{{ match.home }} v. {{ match.away }}</p> 
+                                                    </div>
+                                                    <small class="extra-info">
+                                                        <span>@ {{ match.location }}</span>
+                                                        <span>Japan time: {{ match.datetime | addZone: "ja", "Asia/Tokyo" | date: "%H:%M" }}</span>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <link href="https://fonts.googleapis.com/css?family=Karla|Rubik:700&display=swap" rel="stylesheet">
+    <!-- <script src="/_includes/js/interact.js"></script> -->

@@ -18,5 +18,8 @@
   "homepage": "https://github.com/fishintaiwan/rwc2019-chart#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.9.0"
+  },
+  "dependencies": {
+    "eleventy-plugin-pwa": "^1.0.8"
   }
 }

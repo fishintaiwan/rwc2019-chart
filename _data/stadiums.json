@@ -1,0 +1,14 @@
+[
+    {"name": "Tokyo Stadium", "short": "Tokyo"},
+    {"name": "International Stadium Yokohama", "short": "Yokohama"},
+    {"name": "Shizuoka Stadium Ecopa", "short": "Shizuoka"},
+    {"name": "Hanazono Rugby Stadium", "short": "Hanazono"},
+    {"name": "Fukuoka Hakatanomori Stadium", "short": "Fukuoka"},
+    {"name": "City of Toyota Stadium", "short": "Toyota"},
+    {"name": "Sapporo Dome", "short": "Sapporo"},
+    {"name": "Oita Stadium", "short": "Oita"},
+    {"name": "Kumamoto Stadium", "short": "Kumamoto"},
+    {"name": "Kobe Misaki Stadium", "short": "Kobe"},
+    {"name": "Kumagaya Rugby Stadium", "short": "Kumagaya"},
+    {"name": "Kamaishi Recovery Memorial Stadium", "short": "Kamaishi"}
+]
