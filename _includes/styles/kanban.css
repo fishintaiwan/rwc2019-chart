@@ -487,6 +487,10 @@ footer {
   color: #2c2540;
 }
 
+.match-info .teams .score {
+  font-family: 'Karla', sans-serif;
+}
+
 .extra-info {
   display: -webkit-box;
   display: -ms-flexbox;

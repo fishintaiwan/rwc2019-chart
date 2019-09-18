@@ -36,7 +36,11 @@ permalink: /{{ zone.location }}/index.html
                                 <div class="details">
                                     <div class="match-info">
                                         <div class="teams">
-                                            <p class="home h5">{{ match.home }} v. {{ match.away }}</p> 
+                                                {% if match.homeScore %}
+                                                <p class="home h5"><span class="score">{{ match.homeScore }}</span> {{ match.home }} <br/> <span class="score">{{ match.awayScore }}</span>{{ match.away }}</p>
+                                                {% else %}
+                                                <p class="home h5">{{ match.home }} v. {{ match.away }}</p>
+                                                {% endif %}
                                         </div>
                                         <small class="extra-info">
                                             <span>@ {{ match.location }}</span>
@@ -65,9 +69,13 @@ permalink: /{{ zone.location }}/index.html
                                             </div>
                                             <div class="details">
                                                 <div class="match-info">
-                                                    <div class="teams">
-                                                        <p class="home h5">{{ match.home }} v. {{ match.away }}</p> 
-                                                    </div>
+                                                        <div class="teams">
+                                                                {% if match.homeScore %}
+                                                                <p class="home h5"><span class="score">{{ match.homeScore }}</span> {{ match.home }} <br/> <span class="score">{{ match.awayScore }}</span>{{ match.away }}</p>
+                                                                {% else %}
+                                                                <p class="home h5">{{ match.home }} v. {{ match.away }}</p>
+                                                                {% endif %}
+                                                        </div>
                                                     <small class="extra-info">
                                                         <span>@ {{ match.location }}</span>
                                                         <span>Japan time: {{ match.datetime | addZone: "ja", "Asia/Tokyo" | date: "%H:%M" }}</span>
