@@ -4,8 +4,6 @@ module.exports = function(localeTime, matchTime) {
 
     let matchDateISO = ISODate(matchDate)
     let localeDateISO = ISODate(localeDate)
-    // matchDate = ISODate(matchTime)
-    // localeDate = ISODate(localeTime)
 
     if ( localeDateISO !== matchDateISO ) {
         return localeDateISO
