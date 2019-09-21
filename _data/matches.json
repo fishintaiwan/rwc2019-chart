@@ -1,6 +1,6 @@
 {
     "pools": [
-        {"day": "1", "datetime": "2019-09-20T10:45:00+00:00", "pool": "A", "location": "Tokyo Stadium", "home": "Japan", "away": "Russia", "homeScore": "", "awayScore": ""},
+        {"day": "1", "datetime": "2019-09-20T10:45:00+00:00", "pool": "A", "location": "Tokyo Stadium", "home": "Japan", "away": "Russia", "homeScore": "30", "awayScore": "10"},
         {"day": "2", "datetime": "2019-09-21T04:45:00+00:00", "pool": "D", "location": "Sapporo Dome", "home": "Australia", "away": "Fiji"},
         {"day": "2", "datetime": "2019-09-21T05:15:00+00:00", "pool": "C", "location": "Tokyo Stadium", "home": "France", "away": "Argentina"},
         {"day": "2", "datetime": "2019-09-21T09:45:00+00:00", "pool": "B", "location": "International Stadium Yokohama", "home": "New Zealand", "away": "South Africa"},
