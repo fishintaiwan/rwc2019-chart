@@ -49,6 +49,6 @@
         {"day": "23", "datetime": "2019-10-26T08:00:00+00:00", "semi-day": "3", "semi-phase": "SF1", "location": "International Stadium Yokohama", "home": "Winner QF1", "away": "Winner QF2", "homeScore": "", "awayScore": ""},
         {"day": "24", "datetime": "2019-10-27T09:00:00+00:00", "semi-day": "4", "semi-phase": "SF2", "location": "International Stadium Yokohama", "home": "Winner QF3", "away": "Winner QF4", "homeScore": "", "awayScore": ""},
         {"day": "25", "datetime": "2019-11-01T09:00:00+00:00", "semi-day": "5", "semi-phase": "3RD", "location": "Tokyo Stadium", "home": "Loser SF1", "away": "Loser SF2", "homeScore": "", "awayScore": ""},
-        {"day": "26", "datetime": "2019-11-02T09:00:00+00:00", "semi-day": "6", "semi-phase": "GF", "location": "International Stadium Yokohama", "home": "Winner SF1", "away": "Winner SF2", "homeScore": "", "awayScore": ""}}
+        {"day": "26", "datetime": "2019-11-02T09:00:00+00:00", "semi-day": "6", "semi-phase": "GF", "location": "International Stadium Yokohama", "home": "Winner SF1", "away": "Winner SF2", "homeScore": "", "awayScore": ""}
     ]
 }
