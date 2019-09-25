@@ -39,7 +39,7 @@
         {"day": "20", "datetime": "2019-10-13T03:15:00+00:00", "pool": "B", "location": "Kamaishi Recovery Memorial Stadium", "home": "Namibia", "away": "Canada", "homeScore": "", "awayScore": ""},
         {"day": "20", "datetime": "2019-10-13T05:45:00+00:00", "pool": "C", "location": "Hanazono Rugby Stadium", "home": "USA", "away": "Tonga", "homeScore": "", "awayScore": ""},
         {"day": "20", "datetime": "2019-10-13T08:15:00+00:00", "pool": "D", "location": "Kumamoto Stadium", "home": "Wales", "away": "Uruguay", "homeScore": "", "awayScore": ""},
-        {"day": "20", "datetime": "2019-10-13T10:45:00+00:00", "pool": "A", "location": "International Stadium Yokohama", "home": "Japan", "away": "Scotland", "homeScore": "", "awayScore": ""}}
+        {"day": "20", "datetime": "2019-10-13T10:45:00+00:00", "pool": "A", "location": "International Stadium Yokohama", "home": "Japan", "away": "Scotland", "homeScore": "", "awayScore": ""}
     ],
     "semis": [
         {"day": "21", "datetime": "2019-10-19T07:15:00+00:00", "semi-day": "1", "semi-phase": "QF1", "location": "Oita Stadium", "home": "1st Pool C", "away": "2nd Pool D", "homeScore": "", "awayScore": ""},
