@@ -6,6 +6,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("_redirects");
     eleventyConfig.addPassthroughCopy("manifest.json");
     eleventyConfig.addPassthroughCopy("_includes/icons");
+    eleventyConfig.addPassthroughCopy("robots.txt");
 
     eleventyConfig.addFilter("addZone", require("./filters/zone.js") );
     eleventyConfig.addFilter("dayOffset", require("./filters/dayOffset.js"));
