@@ -42,11 +42,11 @@
         {"day": "20", "datetime": "2019-10-13T10:45:00+00:00", "pool": "A", "location": "International Stadium Yokohama", "home": "Japan", "away": "Scotland", "homeScore": "28", "awayScore": "21"}
     ],
     "semis": [
-        {"day": "21", "datetime": "2019-10-19T07:15:00+00:00", "semi-day": "1", "semi-phase": "QF1", "location": "Oita Stadium", "home": "England", "away": "Australia", "homeScore": "", "awayScore": ""},
-        {"day": "21", "datetime": "2019-10-19T10:15:00+00:00", "semi-day": "1", "semi-phase": "QF2", "location": "Tokyo Stadium", "home": "New Zealand", "away": "Ireland", "homeScore": "", "awayScore": ""},
+        {"day": "21", "datetime": "2019-10-19T07:15:00+00:00", "semi-day": "1", "semi-phase": "QF1", "location": "Oita Stadium", "home": "England", "away": "Australia", "homeScore": "40", "awayScore": "16"},
+        {"day": "21", "datetime": "2019-10-19T10:15:00+00:00", "semi-day": "1", "semi-phase": "QF2", "location": "Tokyo Stadium", "home": "New Zealand", "away": "Ireland", "homeScore": "46", "awayScore": "14"},
         {"day": "22", "datetime": "2019-10-20T07:15:00+00:00", "semi-day": "2", "semi-phase": "QF3", "location": "Oita Stadium", "home": "Wales", "away": "France", "homeScore": "", "awayScore": ""},
         {"day": "22", "datetime": "2019-10-20T10:15:00+00:00", "semi-day": "2", "semi-phase": "QF4", "location": "Tokyo Stadium", "home": "Japan", "away": "South Africa", "homeScore": "", "awayScore": ""},
-        {"day": "23", "datetime": "2019-10-26T08:00:00+00:00", "semi-day": "3", "semi-phase": "SF1", "location": "International Stadium Yokohama", "home": "Winner QF1", "away": "Winner QF2", "homeScore": "", "awayScore": ""},
+        {"day": "23", "datetime": "2019-10-26T08:00:00+00:00", "semi-day": "3", "semi-phase": "SF1", "location": "International Stadium Yokohama", "home": "England", "away": "New Zealand", "homeScore": "", "awayScore": ""},
         {"day": "24", "datetime": "2019-10-27T09:00:00+00:00", "semi-day": "4", "semi-phase": "SF2", "location": "International Stadium Yokohama", "home": "Winner QF3", "away": "Winner QF4", "homeScore": "", "awayScore": ""},
         {"day": "25", "datetime": "2019-11-01T09:00:00+00:00", "semi-day": "5", "semi-phase": "3RD", "location": "Tokyo Stadium", "home": "Loser SF1", "away": "Loser SF2", "homeScore": "", "awayScore": ""},
         {"day": "26", "datetime": "2019-11-02T09:00:00+00:00", "semi-day": "6", "semi-phase": "GF", "location": "International Stadium Yokohama", "home": "Winner SF1", "away": "Winner SF2", "homeScore": "", "awayScore": ""}
