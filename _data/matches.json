@@ -46,9 +46,9 @@
         {"day": "21", "datetime": "2019-10-19T10:15:00+00:00", "semi-day": "1", "semi-phase": "QF2", "location": "Tokyo Stadium", "home": "New Zealand", "away": "Ireland", "homeScore": "46", "awayScore": "14"},
         {"day": "22", "datetime": "2019-10-20T07:15:00+00:00", "semi-day": "2", "semi-phase": "QF3", "location": "Oita Stadium", "home": "Wales", "away": "France", "homeScore": "20", "awayScore": "19"},
         {"day": "22", "datetime": "2019-10-20T10:15:00+00:00", "semi-day": "2", "semi-phase": "QF4", "location": "Tokyo Stadium", "home": "Japan", "away": "South Africa", "homeScore": "3", "awayScore": "26"},
-        {"day": "23", "datetime": "2019-10-26T08:00:00+00:00", "semi-day": "3", "semi-phase": "SF1", "location": "International Stadium Yokohama", "home": "England", "away": "New Zealand", "homeScore": "", "awayScore": ""},
-        {"day": "24", "datetime": "2019-10-27T09:00:00+00:00", "semi-day": "4", "semi-phase": "SF2", "location": "International Stadium Yokohama", "home": "Wales", "away": "South Africa", "homeScore": "", "awayScore": ""},
-        {"day": "25", "datetime": "2019-11-01T09:00:00+00:00", "semi-day": "5", "semi-phase": "3RD", "location": "Tokyo Stadium", "home": "Loser SF1", "away": "Loser SF2", "homeScore": "", "awayScore": ""},
-        {"day": "26", "datetime": "2019-11-02T09:00:00+00:00", "semi-day": "6", "semi-phase": "GF", "location": "International Stadium Yokohama", "home": "Winner SF1", "away": "Winner SF2", "homeScore": "", "awayScore": ""}
+        {"day": "23", "datetime": "2019-10-26T08:00:00+00:00", "semi-day": "3", "semi-phase": "SF1", "location": "International Stadium Yokohama", "home": "England", "away": "New Zealand", "homeScore": "19", "awayScore": "7"},
+        {"day": "24", "datetime": "2019-10-27T09:00:00+00:00", "semi-day": "4", "semi-phase": "SF2", "location": "International Stadium Yokohama", "home": "Wales", "away": "South Africa", "homeScore": "16", "awayScore": "19"},
+        {"day": "25", "datetime": "2019-11-01T09:00:00+00:00", "semi-day": "5", "semi-phase": "3RD", "location": "Tokyo Stadium", "home": "New Zealand", "away": "Wales", "homeScore": "", "awayScore": ""},
+        {"day": "26", "datetime": "2019-11-02T09:00:00+00:00", "semi-day": "6", "semi-phase": "GF", "location": "International Stadium Yokohama", "home": "England", "away": "South Africa", "homeScore": "", "awayScore": ""}
     ]
 }
